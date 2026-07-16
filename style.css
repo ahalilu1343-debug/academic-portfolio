@@ -1,0 +1,355 @@
+/* --- Global Variables & Architectural Tokens --- */
+:root {
+    --mono-bg: #FFFFFF;
+    --mono-text-main: #1A1A1A;
+    --mono-accent: #E67E73; /* Deep Coral */
+    --mono-ui-border: #E5E5E5;
+    
+    --mono-font-head: 'Courier New', Courier, monospace;
+    --mono-font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--mono-bg);
+    color: var(--mono-text-main);
+    font-family: var(--mono-font-body);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Layout Structure Elements --- */
+.mono-header {
+    background-color: var(--mono-bg);
+    border-bottom: 2px solid var(--mono-text-main);
+}
+
+.mono-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+}
+
+.site-id {
+    font-family: var(--mono-font-head);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+}
+
+.mono-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.mono-nav-links a {
+    text-decoration: none;
+    color: var(--mono-text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--mono-font-head);
+    padding-bottom: 0.25rem;
+}
+
+.mono-nav-links a:hover,
+.mono-nav-links a.active {
+    color: var(--mono-accent);
+    border-bottom: 2px solid var(--mono-accent);
+}
+
+.mono-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 4rem 2rem;
+    flex: 1;
+}
+
+.slim-width {
+    max-width: 750px;
+}
+
+/* --- Typography Hierarchy --- */
+.mono-page-title {
+    font-family: var(--mono-font-head);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--mono-text-main);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+}
+
+.mono-sub {
+    font-family: var(--mono-font-head);
+    font-size: 1.1rem;
+    color: var(--mono-accent);
+    margin: 2.5rem 0 1rem 0;
+}
+
+/* --- Specific Components Layout --- */
+.centered-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 65vh;
+    justify-content: center;
+}
+
+.mono-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 3px solid var(--mono-text-main);
+}
+
+.hero-text-block h1 {
+    font-family: var(--mono-font-head);
+    font-size: 2.8rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.mono-subtitle {
+    font-family: var(--mono-font-head);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--mono-accent);
+    margin-bottom: 1.5rem;
+}
+
+.mono-bio {
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.05rem;
+}
+
+/* --- Form & Table Infrastructure --- */
+.mono-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.mono-table th, .mono-table td {
+    border: 1px solid var(--mono-text-main);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.mono-table th {
+    background: var(--mono-text-main);
+    color: var(--mono-bg);
+    font-family: var(--mono-font-head);
+}
+
+.mono-list {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mono-list li {
+    margin-bottom: 0.5rem;
+}
+
+.mono-paragraph {
+    margin-bottom: 1.5rem;
+}
+
+.mono-media-wrapper {
+    border: 2px solid var(--mono-text-main);
+    background: #000;
+    line-height: 0;
+}
+
+/* --- Card Grids --- */
+.mono-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.mono-card {
+    border: 2px solid var(--mono-text-main);
+    background: var(--mono-bg);
+}
+
+.mono-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--mono-text-main);
+}
+
+.mono-card-body {
+    padding: 1.5rem;
+}
+
+.mono-card-body h3 {
+    font-family: var(--mono-font-head);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.mono-card-body p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.mono-text-link {
+    font-size: 0.85rem;
+    font-family: var(--mono-font-head);
+    font-weight: 700;
+    color: var(--mono-text-main);
+    text-decoration: none;
+}
+
+.mono-text-link:hover {
+    color: var(--mono-accent);
+}
+
+/* --- Planner Specifics --- */
+.mono-ui-box {
+    border: 2px solid var(--mono-text-main);
+    padding: 2rem;
+}
+
+.mono-input-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mono-input-row input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--mono-text-main);
+    font-family: var(--mono-font-head);
+    outline: none;
+}
+
+.mono-task-root-group {
+    list-style: none;
+}
+
+.mono-task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--mono-text-main);
+}
+
+.mono-task-item:last-child {
+    border-bottom: none;
+}
+
+.mono-task-item.strike-through span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.mono-control-btn {
+    padding: 0.3rem 0.6rem;
+    font-family: var(--mono-font-head);
+    font-size: 0.8rem;
+    border: 1px solid var(--mono-text-main);
+    background: transparent;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.mono-control-btn:hover {
+    background: var(--mono-accent);
+    color: #fff;
+}
+
+/* --- Form Layouts --- */
+.mono-form {
+    border: 2px solid var(--mono-text-main);
+    padding: 2.5rem;
+}
+
+.mono-control-group {
+    margin-bottom: 1.5rem;
+}
+
+.mono-control-group label {
+    display: block;
+    font-family: var(--mono-font-head);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.mono-control-group input,
+.mono-control-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--mono-text-main);
+    font-family: inherit;
+    outline: none;
+}
+
+.mono-alert-banner {
+    background: #fdf2f2;
+    color: #b91c1c;
+    border: 2px solid #b91c1c;
+    padding: 1rem;
+    font-family: var(--mono-font-head);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.hide-element { display: none; }
+
+/* --- Buttons --- */
+.mono-cta { display: flex; gap: 1rem; }
+.mono-btn {
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-family: var(--mono-font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid var(--mono-text-main);
+    transition: background-color 0.2s;
+}
+
+.mono-btn.primary { background: var(--mono-text-main); color: var(--mono-bg); }
+.mono-btn.primary:hover { background: var(--mono-accent); border-color: var(--mono-accent); }
+.mono-btn.secondary { background: transparent; color: var(--mono-text-main); }
+.mono-btn.secondary:hover { color: var(--mono-accent); border-color: var(--mono-accent); }
+.block-layout-btn { width: 100%; }
+
+.mono-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid var(--mono-text-main);
+    font-family: var(--mono-font-head);
+    font-size: 0.8rem;
+}
+
+/* --- Responsiveness System --- */
+@media (max-width: 800px) {
+    .mono-navbar { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+    .mono-nav-links { width: 100%; justify-content: space-between; }
+    .mono-input-row { flex-direction: column; }
+    .hero-text-block h1 { font-size: 2rem; }
+}

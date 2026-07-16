@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner | Minimalist Monolith</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="mono-header">
+        <nav class="mono-navbar">
+            <div class="site-id">ALEX J. // ACADEMIC</div>
+            <ul class="mono-nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">PROFILE</a></li>
+                <li><a href="projects.html">WORK</a></li>
+                <li><a href="planner.html" class="active">PLANNER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mono-container slim-width">
+        <h2 class="mono-page-title">WORK WORKSPACE</h2>
+        <p class="mono-intro-p">Append, change status flags, or discard operational elements using the array terminal pipeline below.</p>
+
+        <section class="mono-ui-box">
+            <div class="mono-input-row">
+                <input type="text" id="monoTaskInput" placeholder="Specify new milestone sequence string...">
+                <button id="monoAddTrigger" class="mono-btn primary">REGISTER TASK</button>
+            </div>
+
+            <ul id="monoTaskOutputArea" class="mono-task-root-group">
+                <!-- Executed dynamically via associated script execution -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="mono-footer">
+        <p>&copy; 2026 Hamiu Jamilu.</p>
+    </footer>
+
+    <script src="planner.js"></script>
+</body>
+</html>
